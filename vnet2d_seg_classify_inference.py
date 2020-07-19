@@ -30,7 +30,7 @@ def predict_test():
         new_mask_image = cv2.resize(pd_mask_image, (src_image.shape[1], src_image.shape[0]))
         maskfilepath = os.path.join(test_mask_path, imagefile)
         cv2.imwrite(maskfilepath, new_mask_image)
-        out.writelines(imagefile + "," + str(label_image) + "\n")
+        out.writelines(imagefile + "," + str(label_image[0]) + "\n")
 
 
 if __name__ == "__main__":
